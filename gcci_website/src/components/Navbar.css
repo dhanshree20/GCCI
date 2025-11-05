@@ -1,0 +1,151 @@
+.navbar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  font-family: "Segoe UI", Arial, sans-serif;
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar-left img {
+  height: auto;
+}
+
+.navbar-center {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.navbar-center a {
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #123;
+  transition: color 0.3s ease;
+}
+
+.navbar-center a:hover {
+  color: #0046ad;
+}
+
+.divider {
+  color: #777;
+  font-weight: 300;
+}
+
+/* ---------- DROPDOWN MENU ---------- */
+.nav-item-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown {
+  position: absolute;
+  top: 30px;
+  left: -80px;
+  background-color: #679ddb;
+  width: 500px;
+  padding: 30px 40px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.dropdown-arrow {
+  position: absolute;
+  top: -10px;
+  left: 160px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #3368a5;
+}
+
+.dropdown-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: white;
+}
+
+.dropdown-link {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+.dropdown-link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  margin-top: 5px;
+}
+
+.dropdown-link:hover {
+  color: #fffa;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- RIGHT SIDE ---------- */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-btn {
+  background-color: #3368a5;
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid #3368a5;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 15px;
+  transition: background 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #2b5688;
+}
+
+.lang-btn {
+  background: #fff;
+  border: 1px solid #3368a5;
+  color: #3368a5;
+  padding: 10px 14px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.lang-btn:hover {
+  background-color: #e6f0ff;
+}

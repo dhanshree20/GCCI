@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap');
+
+/* Hero News Section */
+
+.about-section {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-image: url("/news_hero.jpg"); /* Replace with your image name */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+/* Dark overlay on left side */
+.about-overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 40%, rgba(0, 0, 0, 0.2) 70%);
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+}
+
+.about-text {
+  max-width: 500px;
+  color: #fff;
+  animation: fadeInLeft 1.2s ease forwards;
+}
+
+.about-text h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 25px;
+}
+
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid #ffffff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.about-link:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.about-link:hover .arrow-icon {
+  transform: translateX(5px);
+}
+
+/* Animation */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .about-section {
+    height: 350px;
+  }
+
+  .about-overlay {
+    padding-left: 40px;
+  }
+
+  .about-text h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text p {
+    display: none;
+  }
+
+  .about-link {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+
+
+/* News Section */
+
+.container {
+  max-width: 850px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 80px 0px 20px 0px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.card-text {
+  flex: 1;
+}
+
+.category {
+  display: inline-block;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 4px 0;
+  line-height: 1.3;
+  cursor: pointer;
+}
+
+.title:hover {
+  text-decoration: underline;
+}
+
+.card-text .description {
+  font-size: 15px;
+  color: #333 !important;      /* Darker, visible text */
+  margin-top: 8px;
+  line-height: 1.6;
+  font-weight: 400;
+  opacity: 1 !important;       /* Ensure full visibility */
+}
+
+/* Contact section description (separate rule to keep white text there) */
+.text-side .description {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  color: #f0f0f0;
+}
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.author {
+  font-weight: 600;
+  font-size: 13px;
+  color: #111;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #666;
+  font-size: 13px;
+}
+
+.icon-item svg {
+  stroke-width: 1.7;
+  color: #777;
+}
+
+.card-image img {
+  width: 130px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.view-more {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.view-more a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.view-more a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .card {
+    flex-direction: column;
+  }
+  .card-image img {
+    width: 100%;
+    height: 180px;
+  }
+}
+
+
+
+
+/* Contact Section */
+
+.section-container {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  background-color: #7a6a55;
+  padding: 20px 0px;
+}
+
+.image-side {
+  position: relative;
+  flex: 1.2;
+  overflow: hidden;
+}
+
+.text-side {
+  flex: 1;
+  background-color: #7a6a55;
+  color: white;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-side h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+  color: #f1f1f1;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  color: #f0f0f0;
+}
+
+.learn-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.learn-more-btn:hover {
+  background-color: #fff;
+  color: #7a6a55;
+}
