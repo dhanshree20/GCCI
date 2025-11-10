@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="footer-brand">
             <Link href="/">
               <Image 
-                src="/logo.png"
+                src="/logo_4.png"
                 alt="Centric Logo" 
                 width={150} 
                 height={50} 

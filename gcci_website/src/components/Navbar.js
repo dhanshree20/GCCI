@@ -13,10 +13,10 @@ const Navbar = () => {
       {/* Left Section */}
       <div className="navbar-left">
       <Link href="/">  <Image
-          src="/logo_2.png"
+          src="/logo_4.png"
           alt="JIPM Logo"
-          width={120}
-          height={50}
+          width={150}
+          height={60}
           className="navbar-logo"
         /></Link>
       </div>
