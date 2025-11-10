@@ -107,7 +107,7 @@ const page = () => {
     <section className="section-container">
       <div className="image-side">
         <Image
-          src="/team_1.jpg" // replace with your uploaded image name
+          src="/images/img_12.jpg" // replace with your uploaded image name
           alt="City view"
           layout="fill"
           objectFit="cover"

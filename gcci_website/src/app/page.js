@@ -13,17 +13,17 @@ export default function Home() {
 
   const slides = [
     {
-      image: "/service/service_1.jpg",
+      image: "/images/img_1.jpg",
       title: "Global Corporate Council India – GCCI International LLP",
       desc: "Delivering End-to-End Business Transformation Through Global Expertise",
     },
     {
-      image: "/service/service_2.jpg",
+      image: "/images/img_6.jpg",
       title: "Productivity Redefined Through Precision.",
       desc: "Experts in TPM, Lean, and Process Automation Solutions.",
     },
     {
-      image: "/service/service_3.jpg",
+      image: "/images/img_2.jpg",
       title: "GCCI International – Inspiring Global Excellence",
       desc: "Transforming Organizations Through Knowledge, Innovation, and Collaboration.",
     },
@@ -295,7 +295,7 @@ const caseStudies = [
       <div className="image-container">
         <div className="top-image">
           <Image
-            src="/team_3.jpg"
+            src="/images/img_9.jpg"
             alt="Team discussion"
             width={350}
             height={250}
@@ -304,7 +304,7 @@ const caseStudies = [
         </div>
         <div className="bottom-image">
           <Image
-            src="/team_2.webp"
+            src="/images/img_10.jpg"
             alt="Professional woman"
             width={300}
             height={200}
@@ -535,7 +535,7 @@ const caseStudies = [
     <section className="section-container">
       <div className="image-side">
         <Image
-          src="/team_1.jpg" // replace with your uploaded image name
+          src="/images/img_12.jpg" // replace with your uploaded image name
           alt="City view"
           layout="fill"
           objectFit="cover"
