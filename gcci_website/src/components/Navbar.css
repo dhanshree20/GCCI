@@ -38,6 +38,7 @@
 .divider {
   color: #777;
   font-weight: 300;
+  margin: 0 14px;
 }
 
 /* ---------- DROPDOWN MENU ---------- */
@@ -49,35 +50,37 @@
 .dropdown {
   position: absolute;
   top: 30px;
-  left: -80px;
-  background-color: #679ddb;
-  width: 500px;
+  left: -250px;
+  background-color: rgba(50, 110, 185, 0.95);
+  width: 950px;
   padding: 30px 40px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.3s ease-in-out;
+  color: white;
 }
 
 .dropdown-arrow {
   position: absolute;
   top: -10px;
-  left: 160px;
+  left: 300px;
   width: 0;
   height: 0;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
-  border-bottom: 12px solid #3368a5;
+  border-bottom: 12px solid rgba(50, 110, 185, 0.95);
 }
 
 .dropdown-content {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
+  justify-content: center; /* centers the items */
+  /* align-items: center; */
+  gap: 60px; /* reduce this value to control the spacing */
+  flex-wrap: nowrap; /* keep both items on one line */
   color: white;
 }
 
 .dropdown-link {
-  color: white;
+  color: white !important; /* force white text */
   font-size: 16px;
   text-decoration: none;
   letter-spacing: 1px;
@@ -98,6 +101,56 @@
 .dropdown-link:hover {
   color: #fffa;
 }
+
+
+/* ---------- SERVICE DROPDOWN  ---------- */
+.dropdown-service {
+  position: absolute;
+  top: 30px;
+  left: -450px;
+  background: rgba(50, 110, 185, 0.95);
+  backdrop-filter: blur(4px);
+  width: 1000px;
+  padding: 35px 50px;
+  animation: fadeIn 0.3s ease-in-out;
+  color: #fff;
+  border-radius: 2px;
+  z-index: 999;
+}
+
+.dropdown-arrow-service {
+  position: absolute;
+  top: -10px;
+  left: 460px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid rgba(50, 110, 185, 0.95);
+}
+
+.dropdown-service-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  width: 100%;
+}
+
+.service-column {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* underline */
+/* .dropdown-service-content .dropdown-link::after {
+  content: "";
+  display: block;
+  width: 115%;
+  height: 1px;
+  background: #fff;
+  margin-top: 8px;
+} */
 
 /* Fade-in animation */
 @keyframes fadeIn {

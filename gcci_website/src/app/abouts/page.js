@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { BookOpen, Lightbulb, Video, Award, Users, ArrowRight } from "lucide-react";
+import { BookOpen, Lightbulb, Video, Award, Users, ArrowRight,Telescope, Target } from "lucide-react";
 import Link from "next/link";
 import {
   BriefcaseBusiness ,
@@ -16,6 +16,55 @@ import React from "react";
 import "./abouts.css"; 
 
 const page = () => {
+
+  // Mission & Vision Section
+
+const visionRef = useRef(null);
+  const missionRef = useRef(null);
+
+  // SCROLL ANIMATION HANDLER
+  useEffect(() => {
+    const handleScroll = () => {
+      const triggerPoint = window.innerHeight - 150;
+
+      if (visionRef.current) {
+        const top = visionRef.current.getBoundingClientRect().top;
+        if (top < triggerPoint) {
+          visionRef.current.classList.add("show-left");
+        }
+      }
+
+      if (missionRef.current) {
+        const top = missionRef.current.getBoundingClientRect().top;
+        if (top < triggerPoint) {
+          missionRef.current.classList.add("show-right");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
+  // Why Choose Us 
+
+  useEffect(() => {
+    const boxes = document.querySelectorAll(".caption-box");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-box");
+        }
+      });
+    }, { threshold: 0.3 });
+
+    boxes.forEach(box => observer.observe(box));
+  }, []);
+  
 
     // Alliances Section
 
@@ -78,25 +127,6 @@ const page = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-    // Map Section
-
-    const imageRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const element = imageRef.current;
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        if (rect.top < windowHeight - 100) {
-          element.classList.add("slide-up");
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <div>
@@ -126,6 +156,152 @@ const page = () => {
       </div>
     </div>
 
+
+    {/* Mission & Vision Section */}
+
+<div className="vm-wrapper">
+      <div className="vm-container">
+
+        {/* VISION */}
+        <div ref={visionRef} className="vm-box vm-left">
+          <Telescope size={80} strokeWidth={1.5} className="vm-icon" />
+          <div className="vm-title">Vision</div>
+          <div className="vm-desc">
+            To enable organizational enlightenment-where people, processes, and technologies evolve with clarity, integrity, and world-class excellence.
+          </div>
+
+          {/* example routing using Link */}
+        </div>
+
+        <div className="vm-divider"></div>
+
+        {/* MISSION */}
+        <div ref={missionRef} className="vm-box vm-right">
+          <Target size={80} strokeWidth={1.5} className="vm-icon" />
+          <div className="vm-title">Mission</div>
+          <div className="vm-desc">
+            To uplift industries through ethical consulting, intelligent automation, and universal knowledge systems that strengthen capabilities, improve performance, and create sustainable, enlightened business growth.
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    {/* Why Choose Us  */}
+
+    <section className="why-choose-section">
+      <h2 className="why-choose-main-title">Why Choose Us</h2>
+
+      <div className="why-choose-wrapper">
+        {/* Left Side Image */}
+        <div className="why-choose-image-side left-slide">
+          <img
+            src="/images/img_23.jpg"
+            alt="Why Choose Us"
+            className="why-main-image"
+          />
+        </div>
+
+        {/* Right Side Content */}
+        <div className="why-choose-content-side right-slide">
+          <div className="container">
+            <div className="caption-boxes">
+              <div className="caption-box caption-blue">
+                <div className="caption-icon">
+                  <svg viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" strokeWidth="2">
+                    <path d="M3 3v18h18" />
+                    <path d="M18 17V9" />
+                    <path d="M13 17V5" />
+                    <path d="M8 17v-3" />
+                  </svg>
+                </div>
+                <div className="caption-content">
+                  <div className="caption-title">VALUE CREATOR TO ORGANIZATION PURPOSE</div>
+                </div>
+              </div>
+
+              <div className="caption-box caption-green">
+                <div className="caption-icon">
+                  <svg viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" strokeWidth="2">
+                    <path d="M9 11l3 3L22 4" />
+                  </svg>
+                </div>
+                <div className="caption-content">
+                  <div className="caption-title">DRIVING TEAM TO OPTIMIZE RETURN ON HUMAN RESOURCE</div>
+                </div>
+              </div>
+
+              <div className="caption-box caption-yellow">
+                <div className="caption-icon">
+                  <svg viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" strokeWidth="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                  </svg>
+                </div>
+                <div className="caption-content">
+                  <div className="caption-title">TRUSTWORTHINESS</div>
+                </div>
+              </div>
+
+              <div className="caption-box caption-orange">
+                <div className="caption-icon">
+                  <svg viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" strokeWidth="2">
+                    <circle cx="12" cy="12" r="10" />
+                  </svg>
+                </div>
+                <div className="caption-content">
+                  <div className="caption-title">CREATIVITY AS CULTURE</div>
+                </div>
+              </div>
+
+              <div className="caption-box caption-pink">
+                <div className="caption-icon">
+                  <svg viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" strokeWidth="2">
+                    <path d="M20.24 12.24A6 6 0 0 0 5 10.5V19h8.5z" />
+                  </svg>
+                </div>
+                <div className="caption-content">
+                  <div className="caption-title">VALUE THE PRINCIPLES AND PEOPLE</div>
+                </div>
+              </div>
+
+              <div className="caption-box caption-purple">
+                <div className="caption-icon">
+                  <svg viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" strokeWidth="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                  </svg>
+                </div>
+                <div className="caption-content">
+                  <div className="caption-title">PERFECTION IN WHAT HE/SHE DOES</div>
+                </div>
+              </div>
+
+              <div className="caption-box caption-red">
+                <div className="caption-icon">
+                  <svg viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" strokeWidth="2">
+                    <path d="M20.24 12.24A6 6 0 0 0 5 10.5V19h8.5z" />
+                  </svg>
+                </div>
+                <div className="caption-content">
+                  <div className="caption-title">METICULOUSNESS TO THE COMMITTED TASK</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
     {/* Alliences Section */}
 
     <div ref={sectionRef} className="services-section fade-up">
@@ -152,78 +328,6 @@ const page = () => {
       </div>
     </div>
 
-    {/* Why choose section */}
-
-    <section className="value-section">
-      {/* Background Image */}
-      <div className="value-bg">
-        <Image
-          src="/value-created.jpg"
-          alt="Background"
-          fill
-          className="value-bg-img"
-        />
-      </div>
-
-      {/* Floating blur circle */}
-      <div
-        className="floating-blur"
-        style={{
-          transform: `translate(${mousePos.x * 80}px, ${mousePos.y * 40}px)`,
-        }}
-      ></div>
-
-      {/* Content */}
-      <div className="value-container">
-        {/* Left Section */}
-        <div className="value-left">
-          <h2 className="value-title">Value Created</h2>
-          <p className="value-subtitle">
-            <span>Building Excellence Through People & Purpose</span>
-          </p>
-
-          <div className="value-grid">
-            {values.map((item, index) => (
-              <div key={index} className="value-card">
-                <h3>{item}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Right Section */}
-        <div className="value-right">
-          <div className="value-image-box">
-            <Image
-              src="/value-created.jpg"
-              alt="Value Created"
-              width={800}
-              height={600}
-              className="value-img"
-            />
-            <div className="value-img-overlay">
-              <h4>Human Values at the Heart of Growth</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-
-    {/* Map Section */}
-    
-    <div className="country-section">
-      <h2 className="country-title">Country Visited with Purpose</h2>
-
-      <div className="image-container">
-        <img
-          ref={imageRef}
-          src="/map2.png"
-          alt="Country Visited"
-          className="country-image"
-        />
-      </div>
-    </div>
 
     {/* Contact Section */}
     

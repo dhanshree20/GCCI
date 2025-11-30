@@ -51,30 +51,30 @@ export default function Home() {
       title:
         " Advocacy / Assessment / Capability Development / Recognition of Competitiveness",
       img: "/service/service_1.jpg",
-      link: "#",
+      link: "service/service1",
     },
     {
       id: 2,
       date: "",
       title: " Liaison Global Expertise Technology Support / Industry Automation",
       img: "/service/service_2.jpg",
-      link: "#",
+      link: "service/service2",
     },
     {
       id: 3,
       date: "",
       title:
-        "Maintenance Software / TPM Software / Support IT / IoT / AI",
+        "Maintenance Software / Support IT / IoT / AI",
       img: "/service/service_3.jpg",
-      link: "#",
+      link: "service/service3",
     },
     {
       id: 4,
       date: "",
       title:
-        "TPM Tools and Books : Produces and sells various tools for promoting TPM",
+        "TPM Software - Subscription Based",
       img: "/service/service_4.jpg",
-      link: "#",
+      link: "service/service4",
     },
   ];
 
@@ -85,24 +85,55 @@ export default function Home() {
       date: "June 09, 2025",
       category: "News",
       title:
-        "9th June is the Global Maintenance Day.",
+        "GCCI Launches Cloud-Based TPM Software (Subscription Model)",
       link: "#",
     },
     {
       date: "Aug 22, 2020",
       category: "News",
       title:
-        "TPM consulting and training",
+        "New Partnership for Global Industrial Technology Integration",
       link: "#",
     },
     {
       date: "Aug 20, 2020",
       category: "News",
       title:
-        "KAIZEN for Business Improvement and Industrial Development in Africa.",
+        "Successful Commissioning of Vision Inspection System",
+      link: "#",
+    },
+    {
+      date: "Aug 21, 2020",
+      category: "News",
+      title:
+        "Custom SPM (Special Purpose Machine) Development Completed",
+      link: "#",
+    },
+    {
+      date: "Aug 18, 2020",
+      category: "News",
+      title:
+        "GCCI Expands IoT & AI Offerings for Predictive Maintenance",
       link: "#",
     },
   ];
+
+   const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const list = scrollRef.current;
+    if (!list) return;
+
+    let scrollInterval = setInterval(() => {
+      list.scrollTop += 1;
+      if (list.scrollTop >= list.scrollHeight - list.clientHeight) {
+        list.scrollTop = 0;
+      }
+    }, 40); // Speed Control
+
+    return () => clearInterval(scrollInterval);
+  }, []);
+
 
   // About Section
 
@@ -239,6 +270,26 @@ const caseStudies = [
 ];
 
 
+ // Map Section
+
+    const imageRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const element = imageRef.current;
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        if (rect.top < windowHeight - 100) {
+          element.classList.add("slide-up");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div>
 
@@ -259,12 +310,12 @@ const caseStudies = [
 
       {/* News Section */}
 
-    <section className="news-section isolated-bg">
+     <section className="news-section isolated-bg">
       <div className="news-container">
         <h2 className="news-title">News</h2>
 
-        <div className="news-list">
-          {newsData.map((item, index) => (
+        <div className="news-list auto-scroll" ref={scrollRef}>
+          {[...newsData, ...newsData].map((item, index) => (
             <div className="news-item" key={index}>
               <p className="news-date">{item.date}</p>
               <span className="news-divider">|</span>
@@ -295,7 +346,7 @@ const caseStudies = [
       <div className="image-container">
         <div className="top-image">
           <Image
-            src="/images/img_9.jpg"
+            src="/images/img_13.jpg"
             alt="Team discussion"
             width={350}
             height={250}
@@ -510,6 +561,22 @@ const caseStudies = [
         </div>
       )}
     </section>
+
+
+     {/* Map Section */}
+    
+    <div className="country-section">
+      <h2 className="country-title">Country Visited with Purpose</h2>
+
+      <div className="image-container">
+        <img
+          ref={imageRef}
+          src="/MAP_1.png"
+          alt="Country Visited"
+          className="country-image"
+        />
+      </div>
+    </div>
 
     {/* Case Studies Section */}
 

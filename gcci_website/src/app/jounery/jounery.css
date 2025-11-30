@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap');
+
+/* Hero News Section */
+
+.about-section {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-image: url("/images/img_20.jpg"); /* Replace with your image name */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+/* Dark overlay on left side */
+.about-overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 40%, rgba(0, 0, 0, 0.2) 70%);
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+}
+
+.about-text {
+  max-width: 500px;
+  color: #fff;
+  animation: fadeInLeft 1.2s ease forwards;
+}
+
+.about-text h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 25px;
+}
+
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid #ffffff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.about-link:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.about-link:hover .arrow-icon {
+  transform: translateX(5px);
+}
+
+/* Animation */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .about-section {
+    height: 350px;
+  }
+
+  .about-overlay {
+    padding-left: 40px;
+  }
+
+  .about-text h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text p {
+    display: none;
+  }
+
+  .about-link {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+
+
+/* ========================================
+   OUR JOURNEY TIMELINE - NEW DESIGN
+   ======================================== */
+/* Main Timeline Container */
+
+.timeline-container {
+  position: relative;
+  background: url("/cherry_updated_3.jpg") right bottom no-repeat;
+  background-size: cover;
+ /* optional: gives parallax effect */
+  z-index: 1;
+}
+.timeline-container {
+    display: flex;
+    width: 100%;
+    max-width: 1600px;
+    gap: 15rem;
+    margin: 0 auto;
+    padding-left: 100px;
+    padding-top: 24px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Timeline (Left - Sticky Sidebar) */
+.timeline {
+    position: sticky;
+    top: 1px;
+    height: fit-content;
+    background: transparent;
+    padding: 2rem 1rem;
+    min-width: 120px;
+    margin-left: 2rem;
+    margin-right: 5rem;
+    z-index: 10;
+}
+
+.timeline ul {
+    list-style: none;
+    position: relative;
+    padding-left: 0;
+}
+
+/* Vertical Line */
+.timeline ul::before {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #d1d5db;
+    z-index: 1;
+}
+
+.timeline li {
+    margin: 4rem 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+
+/* Hover Effect */
+.timeline li:hover {
+    color: #3b82f6;
+}
+
+.timeline li:hover::before {
+    background: #3b82f6;
+    transform: scale(1.15);
+}
+
+/* Dot */
+.timeline li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: #6b7280;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+/* Active State */
+.timeline li.active {
+    color: #3b82f6;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+/* Active Dot Styling */
+.timeline li.active::before {
+    background: #3b82f6;
+    transform: scale(1.5);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.25);
+}
+
+/* Title bubble of active timeline */
+.timeline li.active::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 100%;
+    margin-left: 25px;
+    padding: 6px 12px;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border: 2px solid #3b82f6;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 1;
+    font-size: .85rem;
+    font-weight: 700;
+    color: #3b82f6;
+    z-index: 10;
+    min-width: 150px;
+    text-align: center;
+}
+
+/* Content Section (Right) */
+.content {
+    flex: 1;
+    padding-right: 2rem;
+    padding-left: 3rem;
+    max-width: 750px;
+}
+
+/* Section Cards */
+.year-content {
+    margin-bottom: 3rem;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.year-content:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+}
+
+.year-content h2 {
+    color: #333;
+    margin-bottom: .8rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.year-content p {
+    color: #555;
+    margin-bottom: 1rem;
+    font-size: .95rem;
+    line-height: 1.6;
+}
+
+.year-content img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .timeline-container {
+        flex-direction: column;
+        width: 95%;
+        gap: 2rem;
+    }
+
+    .timeline {
+        position: relative;
+        top: 0;
+        width: 100%;
+        padding: 1.5rem;
+        margin-left: 0;
+    }
+
+    .timeline ul {
+        display: flex;
+        overflow-x: auto;
+        gap: 1.5rem;
+        padding-bottom: 10px;
+    }
+
+    .timeline ul::before {
+        display: none;
+    }
+
+    .timeline li {
+        margin: 0;
+        padding-left: 20px;
+        white-space: nowrap;
+    }
+
+    .timeline li.active::after {
+        display: none;
+    }
+
+    .year-content {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-container {
+        padding: 12px;
+    }
+
+    .year-content h2 {
+        font-size: 1.2rem;
+    }
+}

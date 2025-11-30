@@ -14,40 +14,97 @@ const page = () => {
     id: 1,
     category: "June 09, 2025",
     title:
-      "9th June is the Global Maintenance Day.",
+      "GCCI Launches Cloud-Based TPM Software (Subscription Model)",
     description:
-      "9th June is Global Maintenance Day. It was established by GFMAM, in which JIPM participates, and this year marks its third anniversary.",
+      "GCCI has introduced a next-generation TPM Digital Platform covering all eight TPM pillars with real-time dashboards, mobile app connectivity, and cloud-based analytics. The software is now available on an annual and monthly subscription basis for all industries.",
     // author: "Alex H. Hillixer",
     // comments: 0,
     // views: "1.62K",
     image:
-      "/news/news1.jpg",
+      "/service/service_4.jpg",
   },
   {
     id: 2,
     category: "Aug 22, 2020",
     title:
-      "TPM consulting and training",
+      "New Partnership for Global Industrial Technology Integration",
     description:
-      "JMAC is well known as a business consulting firm, especially in Japan, and also as a consulting firm providing high-quality effective TPM consulting and training, globally.",
+      "GCCI has established collaborative channels with international OEMs and technology experts for automation, smart manufacturing solutions, and advanced vision inspection systems. This alliance strengthens our ability to deliver world-class solutions to Indian industries.",
     // author: "Alex H. Hillixer",
     // comments: 0,
     // views: "458",
     image:
-      "/news/news2.jpg",
+      "/images/img_4.jpg",
   },
   {
     id: 3,
     category: "Aug 20, 2020",
     title:
-      "KAIZEN for Business Improvement and Industrial Development in Africa.",
+      "Successful Commissioning of Vision Inspection System",
     description:
-      "Africa is a frontier market that offers vast opportunities and where job creation is a priority to meet the rapid population growth. Enhancing productivity will allow Africa to bolster its competitive edge in the global market.",
-    // author: "Alex H. Hillixer",
-    // comments: 0,
-    // views: "458",
+      "GCCI recently supported the design and implementation of an AI-driven vision inspection solution for steel tube and strip processing lines, enabling 100% surface defect detection and automated quality control.",
     image:
-      "/news/news3.jpg",
+      "/images/img_9.jpg",
+  },
+  {
+    id: 4,
+    category: "Aug 20, 2020",
+    title:
+      "Custom SPM (Special Purpose Machine) Development Completed",
+    description:
+      "Our engineering team successfully coordinated the development of tailor-made SPMs for assembly and machining applications, improving cycle time, safety, and productivity at multiple client plants.",
+    image:
+      "/images/img_13.jpg",
+  },
+  {
+    id: 5,
+    category: "Aug 20, 2020",
+    title:
+      "GCCI Expands IoT & AI Offerings for Predictive Maintenance",
+    description:
+      "GCCI now provides IoT-based sensor integration for critical machines along with AI/ML predictive maintenance models that help clients prevent breakdowns and optimize equipment reliability.",
+    image:
+      "/images/img_11.jpg",
+  },
+  {
+    id: 6,
+    category: "Aug 20, 2020",
+    title:
+      "New Consulting Assignments in TPM, Lean & Business Excellence",
+    description:
+      "GCCI has initiated new consulting projects across India covering: - TPM Pillar Deployment, - Lean Manufacturing, - TQM & QC Tools Training, - Business Excellence Frameworks. This expansion reflects growing trust in GCCI’s expertise.",
+    image:
+      "/images/img_14.jpg",
+  },
+  {
+    id: 7,
+    category: "Aug 20, 2020",
+    title:
+      "GCCI’s Maintenance Software Rollout at Multiple Plants",
+    description:
+      "Our CMMS-based Maintenance Management Software has been successfully implemented in several factories, enabling digital maintenance scheduling, spares control, and OEE tracking.",
+    image:
+      "/images/img_24.jpg",
+  },
+  {
+    id: 8,
+    category: "Aug 20, 2020",
+    title:
+      "New R&D Initiative for Steel Tube & Strip Mill Solutions",
+    description:
+      "GCCI is developing advanced solutions for steel tube and strip mill equipment, including integration support for NDT systems and smart processing lines.",
+    image:
+      "/images/img_25.jpg",
+  },
+  {
+    id: 9,
+    category: "Aug 20, 2020",
+    title:
+      "Global Experts Conduct Capability Development Sessions",
+    description:
+      "GCCI hosted international experts for hands-on capability development programs focusing on: - Smart Manufacturing, - Digital Transformation, - Industry 4.0, - Advanced Equipment Technology. Participants from multiple sectors joined these sessions.",
+    image:
+      "/images/img_26.jpg",
   },
 ];
 
@@ -86,10 +143,10 @@ const page = () => {
                 <div className="icon-item">
                   <span>{article.comments}</span>
                 </div>
-                <div className="icon-item">
+                {/* <div className="icon-item">
                   <Eye size={26} />
                   <span>{article.views}</span>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

@@ -467,6 +467,20 @@
   color: #d4b98f;
 }
 
+/* 🔥 Auto Scroll Container */
+.auto-scroll {
+  height: 200px; /* Set visible height */
+  overflow: hidden;
+  position: relative;
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  scroll-behavior: smooth;
+}
+
 /* --- Button --- */
 .view-more {
   text-align: center;
@@ -791,6 +805,58 @@ body {
     padding: 6px 12px;
     top: 15px;
     right: 15px;
+  }
+}
+
+
+
+/* Map Section */
+
+.country-section {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #f4f5f7;
+  min-height: 100vh;
+}
+
+.country-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.country-image {
+  width: 90%;
+  max-width: 800px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s ease-out;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* When image scrolls into view */
+.country-image.slide-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .country-image {
+    width: 90%;
+  }
+
+  .country-title {
+    font-size: 24px;
   }
 }
 
