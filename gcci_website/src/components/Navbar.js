@@ -15,10 +15,10 @@ const Navbar = () => {
       <div className="navbar-left">
         <Link href="/">
           <Image
-            src="/logo_4.png"
+            src="/logo_new-removebg-preview.png"
             alt="JIPM Logo"
-            width={150}
-            height={60}
+            width={180}
+            height={80}
             className="navbar-logo"
           />
         </Link>

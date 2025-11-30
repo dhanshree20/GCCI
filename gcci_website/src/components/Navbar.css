@@ -13,7 +13,8 @@
 }
 
 .navbar-left img {
-  height: auto;
+  height: 80px;
+  width: 260px;
 }
 
 .navbar-center {
