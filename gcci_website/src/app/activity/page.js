@@ -63,7 +63,7 @@ const page = () => {
           <p>
             Learning from Japanese excellence to drive global growth and continuous improvement.
           </p>
-          <Link href="abouts" className="about-link">
+          <Link href="/abouts" className="about-link">
             Learn More <ArrowRight className="arrow-icon" size={18} />
           </Link>
         </div>

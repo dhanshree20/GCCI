@@ -32,7 +32,7 @@ const Navbar = () => {
           onMouseEnter={() => setAboutHover(true)}
           onMouseLeave={() => setAboutHover(false)}
         >
-          <Link href="abouts" className="nav-item">
+          <Link href="/abouts" className="nav-item">
             About GCCI
           </Link>
           <span className="divider">|</span>
@@ -41,16 +41,16 @@ const Navbar = () => {
             <div className="dropdown">
               <div className="dropdown-arrow"></div>
               <div className="dropdown-content">
-                <Link href="abouts" className="dropdown-link">
+                <Link href="/abouts" className="dropdown-link">
                   › Company History
                 </Link>
-                <Link href="history" className="dropdown-link">
+                <Link href="/history" className="dropdown-link">
                   › Our Director
                 </Link>
-                <Link href="jounery" className="dropdown-link">
+                <Link href="/jounery" className="dropdown-link">
                   › Our Journey
                 </Link>
-                <Link href="awards" className="dropdown-link">
+                <Link href="/awards" className="dropdown-link">
                   › Awards And Certifications
                 </Link>
               </div>
@@ -58,7 +58,7 @@ const Navbar = () => {
           )}
         </div>
 
-        <Link href="activity" className="nav-item">
+        <Link href="/activity" className="nav-item">
           Activities
         </Link>
         <span className="divider">|</span>
@@ -69,7 +69,7 @@ const Navbar = () => {
           onMouseEnter={() => setServiceHover(true)}
           onMouseLeave={() => setServiceHover(false)}
         >
-          <Link href="service" className="nav-item">
+          <Link href="" className="nav-item">
             Service
           </Link>
           <span className="divider">|</span>
@@ -93,18 +93,18 @@ const Navbar = () => {
           )}
         </div>
 
-        <Link href="news" className="nav-item">
+        <Link href="/news" className="nav-item">
           News
         </Link>
         <span className="divider">|</span>
-        <Link href="gallery" className="nav-item">
+        <Link href="/gallery" className="nav-item">
           Our Gallery
         </Link>
       </nav>
 
       {/* Right Section */}
       <div className="navbar-right">
-        <Link href="contact" className="contact-btn">
+        <Link href="/contact" className="contact-btn">
           Contact Us
         </Link>
         <button className="lang-btn">

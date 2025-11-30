@@ -35,10 +35,10 @@ const Footer = () => {
             <div className="footer-col">
               <h3>SERVICES</h3>
               <ul>
-                <li><Link href="service/service1">Advocacy / Assessment / Capability Development / Recognition of Competitiveness</Link></li>
-                <li><Link href="service/service2">Liaison Global Expertise Technology Support / Industry Automation</Link></li>
-                <li><Link href="service/service3">Maintenance Software / Support IT / IoT / AI</Link></li>
-                <li><Link href="service/service4">TPM Software - Subscription Based</Link></li>
+                <li><Link href="/service/service1">Advocacy / Assessment / Capability Development / Recognition of Competitiveness</Link></li>
+                <li><Link href="/service/service2">Liaison Global Expertise Technology Support / Industry Automation</Link></li>
+                <li><Link href="/service/service3">Maintenance Software / Support IT / IoT / AI</Link></li>
+                <li><Link href="/service/service4">TPM Software - Subscription Based</Link></li>
               </ul>
             </div>
 
@@ -46,11 +46,11 @@ const Footer = () => {
             <div className="footer-col">
               <h3>COMPANY</h3>
               <ul>
-                <li><Link href="abouts">About</Link></li>
-                <li><Link href="service/service1">Services</Link></li>
-                <li><Link href="activity">Activities</Link></li>
-                <li><Link href="news">News</Link></li>
-                <li><Link href="gallery">Our Gallery</Link></li>
+                <li><Link href="/abouts">About</Link></li>
+                <li><Link href="/service/service1">Services</Link></li>
+                <li><Link href="/activity">Activities</Link></li>
+                <li><Link href="/news">News</Link></li>
+                <li><Link href="/gallery">Our Gallery</Link></li>
               </ul>
             </div>
           </div>

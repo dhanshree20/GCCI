@@ -182,7 +182,7 @@ const page = () => {
           Reach out to our team — we’re here to turn your ideas into meaningful outcomes.
         </p>
 
-        <Link href="contact" className="learn-more-btn">
+        <Link href="/contact" className="learn-more-btn">
           Get In Touch <ArrowRight size={18} />
         </Link>
       </div>
