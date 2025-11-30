@@ -5,6 +5,7 @@ import { BookOpen, Lightbulb, Video, Award, Users,Mail , ArrowRight } from "luci
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Twitter, Facebook, Instagram, Linkedin } from "lucide-react";
 import {
   BriefcaseBusiness ,
   Presentation ,
@@ -15,38 +16,99 @@ import {
   PlusCircle,
 } from "lucide-react";
 import React from "react";
-import "./hostory.css"; 
+import "./hostory.css";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 const page = () => {
 
+  // Director Section
+
+   const cardsRef = useRef([]);
+
   useEffect(() => {
-    // Left box animation
-    gsap.from(".hero-left, .hero-left1", {
-      scrollTrigger: {
-        trigger: ".hero-section",
-        start: "top 80%", // Scroll hone par start
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show-card");
+          }
+        });
       },
-      x: -100,
-      opacity: 0,
-      duration: 1.5,
-      ease: "power3.out",
-    });
+      { threshold: 0.3 }
+    );
 
-    // Right Image animation 3D flip
-    gsap.from(".image-frame, .image-frame1", {
-      scrollTrigger: {
-        trigger: ".hero-section",
-        start: "top 80%",
+    cardsRef.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
+  }, []);
+
+  const teamData = [
+  {
+    name: "Yuvaraj Sithaiyan",
+    role: "Founder & Director",
+    desc: "A visionary leader driving business transformation through global best practices and strategic partnerships. With deep expertise in TPM, Lean, and operational excellence, he continues to lead GCCI’s mission of enabling organizations to achieve sustainable performance improvement and global competitiveness.",
+    img: "/founder_1.jpeg",
+  },
+  {
+    name: "Sheeja Yuvaraj",
+    role: "Director & Chief CSR",
+    desc: "A strong advocate of socially responsible growth, she leads GCCI’s CSR initiatives with a focus on community development and capability enhancement. Her leadership brings a balanced approach to business, ensuring value creation not only for clients but also for society.",
+    img: "/founder_4.jpeg",
+  },
+];
+  
+
+// Workflow Section
+
+const [lightboxImg, setLightboxImg] = useState(null);
+  const cardsReff = useRef([]);
+
+  const openLightbox = (img) => setLightboxImg(img);
+  const closeLightbox = () => setLightboxImg(null);
+
+  const workflowData = [
+    {
+      num: "1990-1994",
+      title: "South India Viscose Ltd. (Coimbatore):",
+      desc: "TPM Health Check-up Assessments conducted for 64+ Excellence Levels, developing key success strategies.",
+    },
+    {
+      num: "1995-1996",
+      title: "Balmer Lawry Freight Containers Ltd. (Chennai):",
+      desc: "Supported Rejuvenate & Sustain TPM Results for 43+ Companies. Assessor for 9 Excellence Assessments.",
+    },
+    {
+      num: "1996-2006",
+      title: "Tube Products of India - Murugappa Group:",
+      desc: "Conducted 8,52,740+ Man-Hours training, supported 64 JIPM Awards & 128+ Assessments.",
+    },
+    {
+      num: "2006-2017",
+      title: "CII - TPM Club India (Pune)",
+      desc: "GCCI’s collective TPM experience adds to 225+ Yrs across India.",
+    },
+    {
+      num: "PRESENT",
+      title: "GCCI International LLP (Pune)",
+      desc: "Founded by Mr. Yuvaraj Sithaiyan with 34+ years expert experience.",
+    },
+  ];
+
+  useEffect(() => {
+    let observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show-card");
+          }
+        });
       },
-      opacity: 0,
-      rotationY: 90,
-      transformOrigin: "left center",
-      duration: 1.8,
-      ease: "power4.out",
-    });
+      { threshold: 0.3 }
+    );
 
+    cardsReff.current.forEach((card) => observer.observe(card));
   }, []);
 
   return (
@@ -66,152 +128,66 @@ const page = () => {
     </section>
 
 
+      {/* Director Section */}
 
-
-       {/* ==== Section 1 ==== */}
-      <section className="hero-section">
-        <div className="hero-inner">
-          <div className="hero-left">
-            <div className="small-title">Founder & Director</div>
-
-            <h1 className="main-heading">Yuvaraj Sithaiyan</h1>
-
-            <p className="description">
-              Yuvaraj Sithaiyan, Founder & Director of GCCI, is a Mechanical
-              Engineer with 34+ years of industry expertise. He has successfully
-              led TPM initiatives across India and globally, driving
-              transformation for 43+ companies through strategic excellence and
-              continuous improvement.
-            </p>
+      <section className="team-section">
+      {teamData.map((member, index) => (
+        <div
+          className={`team-card ${
+            index % 2 === 0 ? "left-card" : "right-card"
+          }`}
+          ref={(el) => (cardsRef.current[index] = el)}
+          key={index}
+        >
+          <div className="image-wrapper">
+            <img src={member.img} alt={member.name} />
           </div>
+          <p className="role">{member.role}</p>
+          <h3 className="name">{member.name}</h3>
+          <p className="desc">{member.desc}</p>
+        </div>
+      ))}
+    </section>
 
-          <div className="hero-right">
-            <div className="image-frame">
-              <img src="/founder_1.jpeg" alt="business-person" />
-            </div>
+
+{/* Workflow Section */}
+
+      {lightboxImg && (
+        <div className="lightbox" onClick={closeLightbox}>
+          <span className="close-lightbox">&times;</span>
+          <img src={lightboxImg} className="lightbox-content" />
+        </div>
+      )}
+
+      {/* Workflow Section */}
+      <section id="workflow" className="workflow-section">
+        <div className="workflow-header">
+          <h2 className="workflow-title">
+            The Professional Journey of Mr. Yuvaraj Sithaiyan
+          </h2>
+        </div>
+
+        <div className="workflow-container">
+          <div className="line"></div>
+
+          <div className="workflow-wrapper">
+            {workflowData.map((item, index) => (
+              <div
+                ref={(el) => (cardsReff.current[index] = el)}
+                className="workflow-card"
+                key={index}
+                onClick={() => openLightbox(`/workflow-${index + 1}.jpg`)}
+              >
+                <div className="top-stick"></div>
+                <span className="step-num">{item.num}</span>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
-
-      {/* ==== Section 2 ==== */}
-      <section className="hero-section">
-        <div className="hero-inner1">
-          <div className="hero-right1">
-            <div className="image-frame1">
-              <img src="/founder_4.jpeg" alt="business-person" />
-            </div>
-          </div>
-
-          <div className="hero-left1">
-            <div className="small-title">Founder & Director</div>
-
-            <h1 className="main-heading">Yuvaraj Sithaiyan</h1>
-
-            <p className="description">
-              We help businesses implement modern strategies to boost
-              performance, improve customer experience, and expand globally.
-              With expert consultation and innovation-driven solutions, we
-              empower brands to achieve exceptional growth.
-            </p>
-          </div>
-        </div>
-      </section>
-
-                {/* Founder Section */}
-        <div className="founder-section isolated-bg">
-             <div className="main-container">
-              {/* ===== Header Section ===== */}
-              <div className="header-section">
-                <div className="image-wrapper">
-                  <Image
-                    src="/founder_1.jpeg" // <-- replace with your image path
-                    alt="CEO"
-                    width={200}
-                    height={200}
-                    className="ceo-image"
-                  />
-                </div>
-                <div className="ceo-details">
-                  <h2 className="ceo-name">Yuvaraj Sithaiyan</h2>
-                  <div className="ceo-title"> Founder & Director</div>
-                  <div className="company-name">Global Corporate Council India</div>
-                </div>
-              </div>
-        
-              {/* ===== Timeline Section ===== */}
-              <div className="timeline">
-                <div className="timeline-item">
-                  <div className="icon-box">
-                    <BriefcaseBusiness  size={20} />
-                  </div>
-                  <p>
-                    <span className="year"> PRESENT </span>-<br/> <b> Global Corporate Council India – GCCI / GCCI International LLP (Pune) <br/>
-                     Founder & Director </b> <br/>
-                   GCCI operating from Pune, India. Founded by Mr. Yuvaraj Sithaiyan, Mechanical Engineer with over all 34 Yrs. experience. JIPM Certified TPM Facilitator
-         (Year 2004).
-                  </p>
-                </div>
-        
-                <div className="timeline-item">
-                  <div className="icon-box">
-                    <Presentation  size={20} />
-                  </div>
-                  <p>
-                    <span className="year"> 2006-17 </span>- <br/><b> CII - TPM Club India (Pune) <br/>
-                     Sr. Counsellor</b> <br/>
-                     GCCI teams collective experience in TPM will adds to
-         225+ Yrs. & in Manufacturing 115+ Yrs. We spread
-         across India.
-                  </p>
-                </div>
-        
-                <div className="timeline-item">
-                  <div className="icon-box">
-                    <Factory  size={20} />
-                  </div>
-                  <p>
-                  <span className="year">  1996-2006 </span>- <br/><b>Tube Products of India, Murugappa
-         Group (Pune & Chennai): <br/>
-         Mfg. / PE / Projects / TPM Coordinator </b> <br />
-         Conducted Trainings Approx. 8,52,740 + Man Hrs. for
-         1,15,390 people across the Country and Global level.
-         Supported for accomplishing 64 JIPM Awards (Special
-         + Consistency + Excellence Awards)
-         Associated and Challenged– 128+ JIPM Assessments
-                  </p>
-                </div>
-        
-                <div className="timeline-item">
-                  <div className="icon-box">
-                    <Milestone   size={20} />
-                  </div>
-                  <p>
-                  <span className="year">  1995-1996 </span>- <br/><b> Balmer Lawry Freight Containers Ltd. 
-        (Chennai):  <br/>
-        Maintenance </b><br/>
-        Supporting to Rejuvenate and Sustain The Achieved
-         TPMResults For 43+ Companies
-         Assessor for (EFQM) Business Excellence model for 9
-         Assessments.
-                  </p>
-                </div>
-        
-                <div className="timeline-item">
-                  <div className="icon-box">
-                    <ClipboardCheck  size={20} />
-                  </div>
-                  <p>
-                 <span className="year">   1990-1994</span> - <br/><b> South India Viscose Ltd. (Coimbatore):  <br/>
-                    Maintenance </b><br/>
-                    TPM Health Check-up Assessments done for 64+
-         Excellence and Consistency Levels & Special Awards.
-         Instrumental for developing many Success Strategies
-         and TPMSpecific training material and Programs.
-                  </p>
-                </div>
-              </div>
-            </div>
-        </div>
+    
         
     </div>
   )
