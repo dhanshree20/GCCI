@@ -127,7 +127,7 @@ const page = () => {
       </div>
     </section>
 
-      {/* Newa Section */}
+      {/* News Section */}
      
 
 <main className="container">

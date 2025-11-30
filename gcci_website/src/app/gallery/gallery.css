@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap');
+
+/* Hero News Section */
+
+.about-section {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-image: url("/images/img_23.jpg"); /* Replace with your image name */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+/* Dark overlay on left side */
+.about-overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 40%, rgba(0, 0, 0, 0.2) 70%);
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+}
+
+.about-text {
+  max-width: 500px;
+  color: #fff;
+  animation: fadeInLeft 1.2s ease forwards;
+}
+
+.about-text h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 25px;
+}
+
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid #ffffff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.about-link:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.about-link:hover .arrow-icon {
+  transform: translateX(5px);
+}
+
+/* Animation */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .about-section {
+    height: 350px;
+  }
+
+  .about-overlay {
+    padding-left: 40px;
+  }
+
+  .about-text h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text p {
+    display: none;
+  }
+
+  .about-link {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+
+/* Gallery Section */
+
+.gallery-section {
+  padding: 60px 80px;
+  background: #f3f7fc;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #ddd;
+  transition: transform 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 12px 35px rgba(0,0,0,0.15);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: scale 0.5s ease-in-out;
+}
+
+.gallery-card:hover .gallery-img {
+  scale: 1.1;
+}
+
+/* Hover Text Slide Animation */
+.gallery-content {
+  position: absolute;
+  left: 0;
+  bottom: -60%; /* hidden by default */
+  width: 100%;
+  height: 60%;
+  background: rgba(0, 50, 90, 0.8);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+  transition: bottom 0.5s ease-in-out;
+}
+
+.gallery-card:hover .gallery-content {
+  bottom: 0; /* slide up */
+}
+
+.gallery-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}

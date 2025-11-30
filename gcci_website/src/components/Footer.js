@@ -35,11 +35,10 @@ const Footer = () => {
             <div className="footer-col">
               <h3>SERVICES</h3>
               <ul>
-                <li><Link href="#">Business Consulting</Link></li>
-                <li><Link href="#">Technology Solutions</Link></li>
-                <li><Link href="#">Consulting & Services</Link></li>
-                <li><Link href="#">Digital Consulting</Link></li>
-                <li><Link href="#">Industries</Link></li>
+                <li><Link href="service/service1">Advocacy / Assessment / Capability Development / Recognition of Competitiveness</Link></li>
+                <li><Link href="service/service2">Liaison Global Expertise Technology Support / Industry Automation</Link></li>
+                <li><Link href="service/service3">Maintenance Software / Support IT / IoT / AI</Link></li>
+                <li><Link href="service/service4">TPM Software - Subscription Based</Link></li>
               </ul>
             </div>
 
@@ -48,7 +47,7 @@ const Footer = () => {
               <h3>COMPANY</h3>
               <ul>
                 <li><Link href="abouts">About</Link></li>
-                <li><Link href="service">Services</Link></li>
+                <li><Link href="service/service1">Services</Link></li>
                 <li><Link href="activity">Activities</Link></li>
                 <li><Link href="news">News</Link></li>
               </ul>
@@ -87,7 +86,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="footer-bottom">
           <p>© 2025 Global Corporate Council India. All Rights Reserved</p>
-          <p>Developed by DW Innovation Pvt. Ltd.</p>
+          <p><Link href="https://dwi4u.com/"> Developed by DW Innovation Pvt. Ltd.</Link></p>
         </div>
       </footer>
     </div>

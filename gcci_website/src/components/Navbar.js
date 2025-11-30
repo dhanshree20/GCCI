@@ -96,6 +96,10 @@ const Navbar = () => {
         <Link href="news" className="nav-item">
           News
         </Link>
+        <span className="divider">|</span>
+        <Link href="gallery" className="nav-item">
+          Our Gallery
+        </Link>
       </nav>
 
       {/* Right Section */}
