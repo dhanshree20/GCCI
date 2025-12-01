@@ -118,6 +118,8 @@ useEffect(() => {
     </section>
 
 
+{/* Timeline Section */}
+
       <div className="timeline-container">
 
         {/* Left Timeline */}

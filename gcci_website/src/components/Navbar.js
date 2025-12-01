@@ -142,13 +142,14 @@ const Navbar = () => {
 
           {mobileService && (
             <div className="mobile-submenu">
-              <Link href="service/service1">Advocacy / Assessment / Capability Development / Recognition of Competitiveness</Link>
-              <Link href="service/service2">Liaison Global Expertise Technology Support / Industry Automation</Link>
-              <Link href="service/service3">Maintenance Software / Support IT / IoT / AI</Link>
-              <Link href="service/service4">TPM Software - Subscription Based</Link>
+              <Link href="/service/service1">Advocacy / Assessment / Capability Development / Recognition of Competitiveness</Link>
+              <Link href="/service/service2">Liaison Global Expertise Technology Support / Industry Automation</Link>
+              <Link href="/service/service3">Maintenance Software / Support IT / IoT / AI</Link>
+              <Link href="/service/service4">TPM Software - Subscription Based</Link>
             </div>
           )}
-
+          
+          <Link href="/news" className="mobile-item">News</Link>
           <Link href="/gallery" className="mobile-item">Our Gallery</Link>
           <Link href="/contact" className="mobile-item">Contact</Link>
         </div>
