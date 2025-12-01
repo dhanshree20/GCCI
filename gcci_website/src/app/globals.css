@@ -91,13 +91,65 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+/* ------------------------------------------------------ */
+/* ------------ 320px — EXTRA SMALL PHONES -------------- */
+/* ------------------------------------------------------ */
+@media (max-width: 320px) {
+  .about-hero {
+    height: 75vh;
+  }
+
   .about-content {
-    padding: 40px 20px;
+    padding: 20px 15px;
   }
 
   .about-content h1 {
-    font-size: 2.2rem;
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+
+  .about-content p {
+    font-size: 0.85rem;
+  }
+}
+
+
+/* ------------------------------------------------------ */
+/* ------------ 480px — SMALL PHONES -------------------- */
+/* ------------------------------------------------------ */
+@media (max-width: 480px) {
+  .about-hero {
+    height: 80vh;
+  }
+
+  .about-content {
+    padding: 25px 20px;
+  }
+
+  .about-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-content p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* ------------------------------------------------------ */
+/* ------------ 576px — MEDIUM PHONES ------------------- */
+/* ------------------------------------------------------ */
+@media (max-width: 576px) {
+  .about-hero {
+    height: 85vh;
+  }
+
+  .about-content {
+    padding: 30px 25px;
+  }
+
+  .about-content h1 {
+    font-size: 2rem;
   }
 
   .about-content p {
@@ -105,6 +157,70 @@
   }
 }
 
+
+/* ------------------------------------------------------ */
+/* ------------ 768px — LARGE PHONES -------------------- */
+/* ------------------------------------------------------ */
+@media (max-width: 768px) {
+  .about-hero {
+    height: 90vh;
+  }
+
+  .about-content {
+    padding: 40px 30px;
+  }
+
+  .about-content h1 {
+    font-size: 2.3rem;
+  }
+
+  .about-content p {
+    font-size: 1.05rem;
+  }
+}
+
+
+/* ------------------------------------------------------ */
+/* ------------------ 992px — TABLETS ------------------- */
+/* ------------------------------------------------------ */
+@media (max-width: 992px) {
+  .about-hero {
+    height: 90vh;
+  }
+
+  .about-content {
+    padding: 50px 40px;
+    max-width: 700px;
+  }
+
+  .about-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+
+/* ------------------------------------------------------ */
+/* ------------------ 1152px — SMALL DESKTOP ----------- */
+/* ------------------------------------------------------ */
+@media screen and (max-width: 1152px) {
+  .about-content {
+    padding: 50px 50px;
+  }
+
+  .about-content h1 {
+    font-size: 2.7rem;
+  }
+}
+
+
+/* ------------------------------------------------------ */
+/* ------------------ 1440px — LARGE DESKTOP ----------- */
+/* ------------------------------------------------------ */
+@media screen and (max-width: 1440px) {
+  .about-content {
+    padding: 60px 70px;
+  }
+}
 
 
 /* About Section */

@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
 .footer {
   background: #111726;
   color: #fff;
-  padding: 40px 60px;
-  font-family: Arial, sans-serif;
+  padding: 40px 20px;
+  font-family: "Saira", sans-serif;
 }
 
 .footer-container {
@@ -108,9 +110,7 @@
   color: #bababa  ;
 }
 
-.foot {
-    margin-left: 40px;
-}
+
 
 /* Footer Bottom Centered */
 .footer-bottom {
@@ -146,5 +146,48 @@
 
   .footer-links {
     justify-content: flex-start;
+  }
+}
+
+
+
+
+/* MOBILE VIEW — EVERYTHING LEFT ALIGNED */
+@media (max-width: 768px) {
+
+  .footer-container,
+  .footer-left,
+  .footer-services,
+  .footer-column,
+  .footer-services ul,
+  .footer-company,
+  .footer-contact {
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+
+  /* Ensure lists don’t center by mistake */
+  .footer-services ul li,
+  .footer-company ul li,
+  .footer-contact ul li {
+    text-align: left !important;
+  }
+
+  /* Icons also left aligned */
+  .footer-icons {
+    justify-content: flex-start !important;
+    align-items: center !important;
+  }
+
+  .footer-icons svg {
+    margin-right: 12px;
+  }
+
+  /* Optional: columns should stack cleanly */
+  .footer-column {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 }

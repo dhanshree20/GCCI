@@ -203,3 +203,121 @@
 .lang-btn:hover {
   background-color: #e6f0ff;
 }
+
+
+/* ---------------- MOBILE RESPONSIVE ---------------- */
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 0 20px;
+    height: 70px;
+  }
+
+  .navbar-center,
+  .navbar-right {
+    display: none !important;
+  }
+
+  .hamburger-btn {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* MOBILE MENU */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100vh;
+    background: #02062d;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    transition: left 0.35s ease;
+    z-index: 2000;
+    color: white;
+  }
+
+  .mobile-menu.open {
+    left: 0;
+  }
+
+  .mobile-menu-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+
+  .close-btn {
+    cursor: pointer;
+  }
+
+  .mobile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 80px;
+  }
+
+  .mobile-item {
+    font-size: 18px;
+    color: rgb(254, 254, 255);
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .dropdown-toggle svg {
+    transition: transform 0.3s;
+  }
+
+  /* SUBMENU */
+  .mobile-submenu {
+    padding-left: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .mobile-submenu a {
+    font-size: 16px;
+    color: #e4e4e7;
+  }
+}
+
+/* HIDE HAMBURGER IN DESKTOP */
+.hamburger-btn {
+  display: none;
+}
+
+/* SHOW HAMBURGER ONLY IN MOBILE */
+@media (max-width: 900px) {
+  .hamburger-btn {
+    display: block;
+  }
+}
+
+/* CLOSE BUTTON FIX */
+.close-btn {
+  color: #000 !important;
+  z-index: 3000 !important;
+  width: 40px;
+  height: 40px;
+}
+
+/* HIDE MOBILE SLIDE MENU IN DESKTOP */
+@media (min-width: 901px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+.mobile-menu .close-btn svg {
+  stroke: #000 !important;
+  width: 30px;
+  height: 30px;
+}
