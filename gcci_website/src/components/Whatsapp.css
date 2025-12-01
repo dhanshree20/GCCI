@@ -38,33 +38,105 @@
   font-size: 14px;
 }
 
-/* Show label on wider screens */
-@media (min-width: 900px) {
+/* Extra small devices (≤320px) */
+@media (max-width: 320px) {
   .whatsappButton {
-    width: auto;
+    right: 10px;
+    bottom: 10px;
+    width: 48px;
     height: 48px;
-    padding: 0 14px;
-    border-radius: 28px;
   }
+
   .whatsappButton svg {
-    width: 28px;
-    height: 28px;
-  }
-  .whatsappText {
-    display: inline-block;
+    width: 36px;
+    height: 36px;
   }
 }
 
-/* Smaller size on small devices */
-@media (max-width: 360px) {
+/* Small devices (≤480px) */
+@media (max-width: 480px) {
   .whatsappButton {
-    right: 12px;
-    bottom: 12px;
-    width: 56px;
-    height: 56px;
+    right: 14px;
+    bottom: 14px;
+    width: 54px;
+    height: 54px;
   }
+
+  .whatsappButton svg {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* Medium devices (≤576px) */
+@media (max-width: 576px) {
+  .whatsappButton {
+    right: 15px;
+    bottom: 15px;
+    width: 58px;
+    height: 58px;
+  }
+
+  .whatsappButton svg {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+/* Large phones (≤768px) */
+@media (max-width: 768px) {
+  .whatsappButton {
+    right: 18px;
+    bottom: 18px;
+    width: 60px;
+    height: 60px;
+  }
+
   .whatsappButton svg {
     width: 48px;
     height: 48px;
   }
+
+  .whatsappText {
+    display: none;
+  }
+}
+
+/* Tablets (≤992px) */
+@media (max-width: 992px) {
+  .whatsappButton {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    padding: 0;
+  }
+
+  .whatsappButton svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsappText {
+    display: none !important;
+  }
+}
+
+/* Desktop but smaller screens (≤1152px) */
+@media screen and (max-width: 1152px) {
+  .whatsappButton {
+    width: 68px;
+    height: 68px;
+  }
+}
+
+/* Large desktop adjustments (≤1440px) */
+@media screen and (max-width: 1440px) {
+  .whatsappButton {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+html, body {
+  overflow-x: hidden !important;
 }
