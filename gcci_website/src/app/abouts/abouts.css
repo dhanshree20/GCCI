@@ -76,6 +76,103 @@
 }
 
 
+/* Extra small devices (phones, portrait ≤320px) */
+@media (max-width: 320px) {
+  .about-section {
+    padding: 40px 12px;
+  }
+
+  .content h2 {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .content p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+}
+
+/* Small devices (≤480px) */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 45px 14px;
+  }
+
+  .content h2 {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+/* Medium devices (≤576px) */
+@media (max-width: 576px) {
+  .about-section {
+    padding: 50px 16px;
+  }
+
+  .content h2 {
+    font-size: 1.3rem;
+    line-height: 1.6;
+  }
+
+  .content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .overlay {
+  position: absolute;
+  inset: 0;
+  background: #60a5fab0;
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+}
+
+/* Large phones (≤768px) */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 60px 18px;
+    min-height: auto;
+  }
+
+  .content {
+    max-width: 95%;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+}
+
+/* Tablets (≤992px) */
+@media (max-width: 992px) {
+  .about-section {
+    padding: 80px 25px;
+  }
+
+  .content {
+    max-width: 900px;
+  }
+
+  .content p {
+    font-size: 1.05rem;
+  }
+}
+
+/* Desktop but smaller ≤1152px */
+@media (max-width: 1152px) {}
+
+/* Large Desktop ≤1440px */
+@media (max-width: 1440px) {}
+
+
 /* Mission & Vision Section */
 
 .vm-wrapper {
@@ -149,7 +246,64 @@
   margin: 0 20px;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE MOBILE + TABLET SECTION */
+
+/* Extra small (phones portrait) */
+@media (max-width: 320px) {
+  .vm-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .vm-box {
+    width: 100%;
+  }
+
+  .vm-icon {
+    margin-left: 0;
+    width: 60px;
+    height: 60px;
+  }
+
+  .vm-title {
+    font-size: 22px;
+  }
+
+  .vm-desc {
+    font-size: 14px;
+  }
+}
+
+/* Small devices (phones) */
+@media (max-width: 480px) {
+  .vm-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .vm-divider {
+    display: none;
+  }
+
+  .vm-box {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .vm-icon {
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+}
+
+/* Medium devices (phones) */
+@media (max-width: 576px) {
+  .vm-container {
+    flex-direction: column;
+  }
+}
+
+/* Large phones */
 @media (max-width: 768px) {
   .vm-container {
     flex-direction: column;
@@ -159,8 +313,44 @@
     display: none;
   }
 
+  .vm-icon {
+    margin-left: 0;
+  }
+
   .vm-box {
     width: 100%;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .vm-container {
+    flex-direction: column;
+  }
+
+  .vm-divider {
+    display: none;
+  }
+
+  .vm-box {
+    width: 85%;
+  }
+
+  .vm-icon {
+    margin-left: 80px;
+  }
+}
+
+/* Slight adjustments for 1152px and 1440px if needed */
+@media (max-width: 1152px) {
+  .vm-box {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .vm-box {
+    width: 75%;
   }
 }
 
@@ -256,22 +446,88 @@
   line-height: 1.6;
 }
 
-/* 📱 Responsive */
-@media (max-width: 1100px) {
+/* ----------------- RESPONSIVE DESIGN ----------------- */
+
+/* Extra small devices (phones, portrait) 320px */
+@media (max-width: 320px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .services-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+  .service-card {
+    padding: 25px 15px;
+  }
+}
+
+/* Small devices (phones) 480px */
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .services-header h2 {
+    font-size: 2rem;
+  }
+  .service-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    margin-top: -50px;
+  }
+  .service-image {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Medium devices (phones) 576px */
+@media (max-width: 576px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .services-section {
+    padding: 60px 10px;
+  }
+}
+
+/* Large phones 768px */
+@media (max-width: 768px) {
+  .services-grid {
+    gap: 20px;
+    grid-template-columns: 1fr !important;
+  }
+  .services-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .service-card {
+    width: 100%;
+  }
+}
+
+/* Tablets 992px */
+@media (max-width: 992px) {
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (max-width: 768px) {
+
+/* Large screens slightly shrink spacing 1152px */
+@media screen and (max-width: 1152px) {
   .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
-@media (max-width: 500px) {
+
+/* 1440px adjustment if needed */
+@media screen and (max-width: 1440px) {
   .services-grid {
-    grid-template-columns: 1fr;
+    gap: 25px;
   }
 }
+
 
 
 
@@ -343,6 +599,92 @@
 .learn-more-btn:hover {
   background-color: #fff;
   color: black;
+}
+
+
+/* ---------------- MEDIA QUERIES (Responsive) ---------------- */
+
+/* Extra small devices (320px and below) */
+@media (max-width: 320px) {
+  .section-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .text-side {
+    padding: 20px;
+  }
+
+  .text-side h2 {
+    font-size: 1.4rem;
+  }
+
+  .subtitle, .description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small phones (480px and below) */
+@media (max-width: 480px) {
+  .section-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .text-side {
+    padding: 25px;
+  }
+}
+
+/* Medium phones (576px and below) */
+@media (max-width: 576px) {
+  .section-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .text-side h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Large phones (768px and below) */
+@media (max-width: 768px) {
+  .section-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .image-side {
+    height: 260px;
+  }
+
+  .text-side {
+    padding: 30px;
+  }
+}
+
+/* Tablets (992px and below) */
+@media (max-width: 992px) {
+  .section-container {
+    height: auto;
+  }
+
+  .text-side {
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 1152px) {
+  .text-side h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .text-side {
+    padding: 50px;
+  }
 }
 
 
