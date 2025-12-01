@@ -375,6 +375,211 @@
   background-color: #1297f6;
 }
 
+/* ---------------------------------------------------------
+   EXTRA SMALL (MAX 320PX)
+--------------------------------------------------------- */
+@media (max-width: 320px) {
+  .business-section {
+    padding: 40px 20px !important;
+  }
+
+  /* Background hide */
+  .business-section::before {
+    display: none !important;
+  }
+
+  /* Column layout */
+  .container {
+    flex-direction: column !important;
+    gap: 30px !important;
+  }
+
+  /* Images responsive */
+  .top-image img,
+  .bottom-image img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .bottom-image {
+    position: relative !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    margin-top: 20px !important;
+  }
+
+  /* Text responsive */
+  .main-heading {
+    font-size: 1.4rem !important;
+  }
+  .section-label {
+    font-size: 1.1rem !important;
+  }
+  .section-par {
+    font-size: 14px !important;
+  }
+}
+
+/* ---------------------------------------------------------
+   SMALL PHONES (MAX 480PX)
+--------------------------------------------------------- */
+@media (max-width: 480px) {
+  .business-section {
+    padding: 50px 25px !important;
+  }
+
+  .business-section::before {
+    display: none !important;
+  }
+
+  .container {
+    flex-direction: column !important;
+    text-align: left !important;
+    gap: 35px !important;
+  }
+
+  .left-side,
+  .right-side {
+    width: 100% !important;
+  }
+
+  .bottom-image {
+    position: relative !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    margin-top: 15px !important;
+  }
+
+  .main-heading {
+    font-size: 1.6rem !important;
+  }
+}
+
+/* ---------------------------------------------------------
+   MEDIUM PHONES (MAX 576PX)
+--------------------------------------------------------- */
+@media (max-width: 576px) {
+  .business-section::before {
+    display: none !important;
+  }
+
+  .container {
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+
+  .bottom-image {
+    position: relative !important;
+    left: 0 !important;
+    bottom: 0 !important;
+  }
+}
+
+/* ---------------------------------------------------------
+   LARGE PHONES (MAX 768PX)
+--------------------------------------------------------- */
+@media (max-width: 768px) {
+  .business-section {
+    padding: 60px 30px !important;
+  }
+
+  .business-section::before {
+    display: none !important;
+  }
+
+  .container {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 50px !important;
+  }
+
+  .left-side,
+  .right-side {
+    width: 100% !important;
+  }
+
+  .bottom-image {
+    position: relative !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    margin-top: 20px !important;
+  }
+}
+
+/* MOBILE FIX — Images one below another */
+@media (max-width: 768px) {
+
+  /* Background hide */
+  .business-section::before {
+    display: none !important;
+  }
+
+  /* Full column layout */
+  .container {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+  }
+
+  /* LEFT SIDE IMAGE SECTION full width */
+  .left-side {
+    width: 100% !important;
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: column !important;  /* <-- Stack images vertically */
+    gap: 15px !important;
+    position: relative !important;
+  }
+
+  .top-image,
+  .bottom-image {
+    position: relative !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+
+  }
+
+  .top-image img,
+  .bottom-image img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 14px !important;
+    margin-top: -30px;
+  }
+
+  /* RIGHT SIDE stays same but full width */
+  .right-side {
+    width: 100% !important;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   TABLETS (MAX 992PX)
+--------------------------------------------------------- */
+@media (max-width: 992px) {
+  .business-section {
+    padding: 70px 40px !important;
+  }
+
+  .business-section::before {
+    display: none !important;
+  }
+
+  .container {
+    flex-direction: column !important;
+    gap: 60px !important;
+  }
+
+  .bottom-image {
+    position: relative !important;
+    left: 0 !important;
+    bottom: 0 !important;
+  }
+}
 
 
 /* Services Section */
@@ -489,15 +694,115 @@
 }
 
 
-/* Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 320px) {
+  .insights-section {
+    padding: 20px 20px;
+  }
+
+  .services-title {
+    font-size: 1.8rem;
+  }
+
+  .insights-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .insight-card {
+    height: 220px;
+  }
+
+  .insight-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .insights-section {
+    padding: 25px 25px;
+  }
+
+  .services-title {
+    font-size: 2rem;
+  }
+
+  .insights-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .insight-card {
+    height: 240px;
+  }
+
+  .insight-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .insights-section {
+    padding: 30px 30px;
+  }
+
   .insights-grid {
     grid-template-columns: 1fr;
   }
+
   .insight-card {
-    height: 280px;
+    height: 260px;
   }
 }
+
+@media (max-width: 768px) {
+  .insights-section {
+    padding: 35px 40px;
+  }
+
+  .services-title {
+    font-size: 2.4rem;
+  }
+
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .insight-card {
+    height: 300px;
+    width: 250px;
+  }
+
+  .insight-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .insights-section {
+    padding: 40px 50px;
+  }
+
+  .services-title {
+    font-size: 2.6rem;
+  }
+
+  .insight-card {
+    height: 320px;
+  }
+}
+
+@media (max-width: 1152px) {
+  .insights-section {
+    padding: 50px 60px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .insights-section {
+    padding: 60px 40px;
+  }
+}
+
 
 
 
@@ -629,21 +934,191 @@
   transform: translateX(4px);
 }
 
-/* --- Responsive --- */
-@media (max-width: 768px) {
-  .news-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
+/* ======================================================== */
+/* =================== RESPONSIVE CSS ===================== */
+/* ======================================================== */
+
+
+/* -------------------------------- */
+/* 320px — EXTRA SMALL PHONES       */
+/* -------------------------------- */
+@media (max-width: 320px) {
+
+  .news-container {
+    padding: 0 15px;
   }
 
   .news-title {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
+  }
+
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .news-link {
+    font-size: 0.85rem;
   }
 
   .view-more-btn {
     width: 100%;
     justify-content: center;
+    padding: 10px 20px;
+  }
+}
+
+
+/* -------------------------------- */
+/* 480px — SMALL PHONES             */
+/* -------------------------------- */
+@media (max-width: 480px) {
+
+  .news-container {
+    padding: 0 20px;
+  }
+
+  .news-title {
+    font-size: 1.8rem;
+  }
+
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+  }
+
+  .news-link {
+    font-size: 0.9rem;
+  }
+
+  .view-more-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+/* -------------------------------- */
+/* 576px — MEDIUM PHONES            */
+/* -------------------------------- */
+@media (max-width: 576px) {
+
+  .news-title {
+    font-size: 2rem;
+  }
+
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .news-link {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* -------------------------------- */
+/* 768px — LARGE PHONES             */
+/* -------------------------------- */
+@media (max-width: 768px) {
+
+  .news-title {
+    font-size: 2.2rem;
+  }
+
+ .news-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    gap: 4px !important;
+  }
+
+  /* Date | News / will remain in one line */
+  .news-item > *:first-child {
+    white-space: nowrap !important;
+    display: flex !important;
+    gap: 5px !important;
+    align-items: center !important;
+  }
+
+  /* 👉 FORCE description to next line */
+  .news-item a,
+  .news-item .news-link,
+  .news-item p:last-child {
+    display: block !important;
+    white-space: normal !important;
+    width: 100% !important;
+    margin-top: 4px !important;
+    line-height: 1.3 !important;
+  }
+  .news-container {
+    padding: 0 25px;
+  }
+
+  .view-more-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .news-section.isolated-bg::before {
+    background: none !important;
+  }
+
+   .news-item p,
+  .news-item span {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* -------------------------------- */
+/* 992px — TABLETS                  */
+/* -------------------------------- */
+@media (max-width: 992px) {
+
+  .news-container {
+    padding: 0 30px;
+  }
+
+  .news-title {
+    font-size: 2.5rem;
+  }
+
+  .news-item {
+    gap: 6px;
+  }
+
+  .auto-scroll {
+    height: 220px; /* little more height for tablets */
+  }
+}
+
+
+/* -------------------------------- */
+/* 1152px — SMALL DESKTOP           */
+/* -------------------------------- */
+@media (max-width: 1152px) {
+  .news-container {
+    padding: 0 40px;
+  }
+
+  .news-title {
+    font-size: 2.6rem;
+  }
+}
+
+
+/* -------------------------------- */
+/* 1440px — LARGE DESKTOP           */
+/* -------------------------------- */
+@media (max-width: 1440px) {
+  .news-container {
+    padding: 0 45px;
   }
 }
 
