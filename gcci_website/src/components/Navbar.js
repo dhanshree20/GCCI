@@ -21,10 +21,10 @@ const Navbar = () => {
         <div className="navbar-left">
           <Link href="/">
             <Image
-              src="/logo_new-removebg-preview.png"
+              src="/gcci_new2.jpg"
               alt="JIPM Logo"
-              width={180}
-              height={80}
+              width={100}
+              height={50}
               className="navbar-logo"
             />
           </Link>
@@ -77,7 +77,7 @@ const Navbar = () => {
 
                   <div className="service-column">
                     <Link href="service/service3" className="dropdown-link">› Maintenance Software / Support IT / IoT / AI</Link>
-                    <Link href="service/service4" className="dropdown-link">› TPM Software - Subscription Based</Link>
+                    <Link href="service/service4" className="dropdown-link">› TPM Software (Subscription Model)</Link>
                   </div>
                 </div>
               </div>
@@ -93,7 +93,7 @@ const Navbar = () => {
         <div className="navbar-right">
           <Link href="/contact" className="contact-btn">Contact Us</Link>
           <button className="lang-btn">
-            <Globe size={18} style={{ marginRight: "4px" }} /> JP
+            <Globe size={18} style={{ marginRight: "4px" }} /> IN
           </button>
         </div>
 

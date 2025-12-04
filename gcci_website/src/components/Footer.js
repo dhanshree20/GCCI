@@ -38,7 +38,7 @@ const Footer = () => {
                 <li><Link href="/service/service1">Advocacy / Assessment / Capability Development / Recognition of Competitiveness</Link></li>
                 <li><Link href="/service/service2">Liaison Global Expertise Technology Support / Industry Automation</Link></li>
                 <li><Link href="/service/service3">Maintenance Software / Support IT / IoT / AI</Link></li>
-                <li><Link href="/service/service4">TPM Software - Subscription Based</Link></li>
+                <li><Link href="/service/service4">TPM Software (Subscription Model)</Link></li>
               </ul>
             </div>
 

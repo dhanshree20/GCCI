@@ -7,18 +7,19 @@ import { ArrowLeft , ArrowRight, MessageSquare, Eye } from "lucide-react";
 
 const page = () => {
     const galleryItems = [
+      { src: "/images/img_22.jpg", title: "JIPM Assessment with Sensei Ichikawa San & Sensei Nomura San" },
+      { src: "/images/img_4.jpg", title: "COCA COLA JIPM Assessment with Japanese Sensei Sugiura San & Sensei Nomura San" },
   { src: "/images/img_29.jpeg", title: "Conducting MAKIGAMI Analysis in Rucha Engineers" },
   { src: "/images/img_31.jpeg", title: "Conducting MAKIGAMI Analysis in Rucha Engineers" },
   { src: "/images/img_33.jpeg", title: "TPM Kick off at MMForgings" },
-  { src: "/images/img_22.jpg", title: "JIPM Assessment with Sensei Ichikawa San & Sensei Nomura San" },
+  
   { src: "/images/img_37.jpg", title: "ABI Showa tech JIPM Assessment" },
-  { src: "/images/img_18.jpg", title: "TPM Facilitators course (cii) conducted for foreign deligate" },
-  { src: "/images/img_4.jpg", title: "COCA COLA JIPM Assessment with Japanese Sensei Sugiura San & Sensei Nomura San" },
   { src: "/images/img_38.jpg", title: "JIPM Assessment Harsha Engg. International" },
   { src: "/images/img_39.jpg", title: "TPM Review at WAR ROOM" },
   { src: "/images/img_40.jpg", title: "Lean Tour Japan" },
   { src: "/images/img_11.jpg", title: "Bussiness Excellence Assesmsnet in SAIL" },
   { src: "/images/img_41.jpg", title: "NIPPON Steel - Japan Plant Visit" },
+  { src: "/images/img_18.jpg", title: "TPM Facilitators course (cii) conducted for foreign deligate" },
 
   { src: "/images/img_12.jpg", title: "Team Member in Business Excellence Assessment SAIL -" },
   { src: "/images/img_7.jpg", title: "LUMAX JIPM Assessment" },

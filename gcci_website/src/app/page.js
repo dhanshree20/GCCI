@@ -14,7 +14,7 @@ export default function Home() {
   const slides = [
     {
       image: "/images/img_1.jpg",
-      title: "Global Corporate Council India – GCCI International LLP",
+      title: "Global Corporate Council India – GCCI / GCCI International LLP",
       desc: "Delivering End-to-End Business Transformation Through Global Expertise",
     },
     {
@@ -72,7 +72,7 @@ export default function Home() {
       id: 4,
       date: "",
       title:
-        "TPM Software - Subscription Based",
+        "TPM Software (Subscription Model)",
       img: "/service/service_4.jpg",
       link: "service/service4",
     },
@@ -424,11 +424,11 @@ const caseStudies = [
           </Link>
         ))}
       </div>
-      <div className="view-more-services">
+      {/* <div className="view-more-services">
           <Link href="#" className="view-more-btn-services">
             View All Services <ChevronRight size={18} className="icon" />
           </Link>
-        </div>
+        </div> */}
     </section>
 
   
